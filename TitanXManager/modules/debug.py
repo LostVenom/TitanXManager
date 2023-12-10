@@ -5,8 +5,8 @@ from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler
 from telethon import events
 
-from FallenRobot import dispatcher, telethn
-from FallenRobot.modules.helper_funcs.chat_status import dev_plus
+from TitanXManager import dispatcher, telethn
+from TitanXManager.modules.helper_funcs.chat_status import dev_plus
 
 DEBUG_MODE = False
 
