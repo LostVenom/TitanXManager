@@ -2,8 +2,8 @@ import requests
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext
 
-from FallenRobot import dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
+from TitanXManager import dispatcher
+from TitanXManager.modules.disable import DisableAbleCommandHandler
 
 
 def ud(update: Update, context: CallbackContext):
