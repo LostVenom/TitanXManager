@@ -5,9 +5,9 @@ import zipfile
 from telethon import types
 from telethon.tl import functions
 
-from FallenRobot import TEMP_DOWNLOAD_DIRECTORY
-from FallenRobot import telethn as client
-from FallenRobot.events import register
+from TitanXManager import TEMP_DOWNLOAD_DIRECTORY
+from TitanXManager import telethn as client
+from TitanXManager.events import register
 
 
 async def is_register_admin(chat, user):
