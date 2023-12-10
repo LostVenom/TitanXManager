@@ -8,13 +8,6 @@
   <img src=" ">
 </p>
 
-
-━━━━━━━━━━━━━━━━━━━━
-
-<p align="center">
-  <img src="https://graph.org/file/6961eb4e48ff175661166.jpg">
-</p>
-
 <p align="center">
 <b>𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗𝗦</b>
 </p>
