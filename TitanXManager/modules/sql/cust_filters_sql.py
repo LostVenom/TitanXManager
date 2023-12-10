@@ -2,8 +2,9 @@ import threading
 
 from sqlalchemy import BigInteger, Boolean, Column, String, UnicodeText, distinct, func
 
-from FallenRobot.modules.helper_funcs.msg_types import Types
-from FallenRobot.modules.sql import BASE, SESSION
+from 
+TitanXManager.modules.helper_funcs.msg_types import Types
+from TitanXManager.modules.sql import BASE, SESSION
 
 
 class CustomFilters(BASE):
