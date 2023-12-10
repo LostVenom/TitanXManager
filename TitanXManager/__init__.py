@@ -148,7 +148,7 @@ DEV_USERS.add(1215104805)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Titan", API_ID, API_HASH)
 
-pbot = Client("TitanXManagert", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pbot = Client("TitanXManager", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 
 print("[INFO]: Getting Bot Info...")
