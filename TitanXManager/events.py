@@ -5,7 +5,7 @@ from pathlib import Path
 from pymongo import MongoClient
 from telethon import events
 
-from TitanXManagerimport MONGO_DB_URI, telethn
+from TitanXManager import MONGO_DB_URI, telethn
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
