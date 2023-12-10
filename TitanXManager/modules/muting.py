@@ -6,20 +6,20 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler
 from telegram.utils.helpers import mention_html
 
-from FallenRobot import LOGGER, TIGERS, dispatcher
-from FallenRobot.modules.helper_funcs.chat_status import (
+from TitanXManager import LOGGER, TIGERS, dispatcher
+from TitanXManager.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     connection_status,
     is_user_admin,
     user_admin,
 )
-from FallenRobot.modules.helper_funcs.extraction import (
+from TitanXManager.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from FallenRobot.modules.helper_funcs.string_handling import extract_time
-from FallenRobot.modules.log_channel import loggable
+from TitanXManager.modules.helper_funcs.string_handling import extract_time
+from TitanXManager.modules.log_channel import loggable
 
 
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
