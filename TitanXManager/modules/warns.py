@@ -24,9 +24,9 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-from FallenRobot import TIGERS, WOLVES, dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
-from FallenRobot.modules.helper_funcs.chat_status import (
+from TitanXManager import TIGERS, WOLVES, dispatcher
+from TitanXManager.modules.disable import DisableAbleCommandHandler
+from TitanXManager.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -38,12 +38,12 @@ from FallenRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from FallenRobot.modules.helper_funcs.filters import CustomFilters
-from FallenRobot.modules.helper_funcs.misc import split_message
-from FallenRobot.modules.helper_funcs.string_handling import split_quotes
-from FallenRobot.modules.log_channel import loggable
-from FallenRobot.modules.sql import warns_sql as sql
-from FallenRobot.modules.sql.approve_sql import is_approved
+from TitanXManager.modules.helper_funcs.filters import CustomFilters
+from TitanXManager.modules.helper_funcs.misc import split_message
+from TitanXManager.modules.helper_funcs.string_handling import split_quotes
+from TitanXManager.modules.log_channel import loggable
+from TitanXManager.modules.sql import warns_sql as sql
+from TitanXManager.modules.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
