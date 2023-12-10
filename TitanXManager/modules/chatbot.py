@@ -30,7 +30,7 @@ from TitanXManager.modules.log_channel import gloggable
 
 @user_admin_no_reply
 @gloggable
-def fallenrm(update: Update, context: CallbackContext) -> str:
+def titanrm(update: Update, context: CallbackContext) -> str:
     query: Optional[CallbackQuery] = update.callback_query
     user: Optional[User] = update.effective_user
     match = re.match(r"rm_chat\((.+?)\)", query.data)
@@ -86,7 +86,7 @@ def titanadd(update: Update, context: CallbackContext) -> str:
 
 @user_admin
 @gloggable
-def fallen(update: Update, context: CallbackContext):
+def titan(update: Update, context: CallbackContext):
     message = update.effective_message
     msg = "• ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ᴛᴏ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ"
     keyboard = InlineKeyboardMarkup(
