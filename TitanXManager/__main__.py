@@ -342,7 +342,7 @@ def help_button(update, context):
         pass
 
 
-def Fallen_about_callback(update: Update, context: CallbackContext):
+def Titan_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "titan_":
         uptime = get_readable_time((time.time() - StartTime))
@@ -445,6 +445,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
 
  | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
 """,
+
+            
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
