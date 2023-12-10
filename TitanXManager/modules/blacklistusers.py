@@ -12,7 +12,7 @@ from TitanXManager.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from FallenRobot.modules.log_channel import gloggable
+from TitanXManager.modules.log_channel import gloggable
 
 BLACKLISTWHITELIST = [OWNER_ID] + DEV_USERS + DRAGONS + WOLVES + DEMONS
 BLABLEUSERS = [OWNER_ID] + DEV_USERS
