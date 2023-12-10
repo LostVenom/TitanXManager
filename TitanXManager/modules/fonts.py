@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from FallenRobot import pbot
-from FallenRobot.utils.fonts import Fonts
+from TitanXManager import pbot
+from TitanXManager.utils.fonts import Fonts
 
 
 @pbot.on_message(filters.command(["font", "fonts"]))
