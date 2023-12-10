@@ -2,8 +2,7 @@ import threading
 
 from sqlalchemy import BigInteger, Boolean, Column, String, UnicodeText, distinct, func
 
-from 
-TitanXManager.modules.helper_funcs.msg_types import Types
+from TitanXManager.modules.helper_funcs.msg_types import Types
 from TitanXManager.modules.sql import BASE, SESSION
 
 
