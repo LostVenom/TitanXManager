@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String
 
-from FallenRobot.modules.sql import BASE, SESSION
+from TitanXManager.modules.sql import BASE, SESSION
 
 
 class Nightmode(BASE):
