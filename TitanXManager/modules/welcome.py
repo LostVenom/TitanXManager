@@ -22,9 +22,9 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
 
-import FallenRobot
-import FallenRobot.modules.sql.welcome_sql as sql
-from FallenRobot import (
+import TitanXManager
+import TitanXManager.modules.sql.welcome_sql as sql
+from TitanXManager import (
     DEMONS,
     DEV_USERS,
     DRAGONS,
@@ -35,18 +35,18 @@ from FallenRobot import (
     WOLVES,
     dispatcher,
 )
-from FallenRobot.modules.helper_funcs.chat_status import (
+from TitanXManager.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from FallenRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from FallenRobot.modules.helper_funcs.msg_types import get_welcome_type
-from FallenRobot.modules.helper_funcs.string_handling import (
+from TitanXManager.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from TitanXManager.modules.helper_funcs.msg_types import get_welcome_type
+from TitanXManager.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from FallenRobot.modules.log_channel import loggable
-from FallenRobot.modules.sql.global_bans_sql import is_user_gbanned
+from TitanXManager.modules.log_channel import loggable
+from TitanXManager.modules.sql.global_bans_sql import is_user_gbanned
 
 VALID_WELCOME_FORMATTERS = [
     "first",
@@ -273,7 +273,7 @@ def new_member(update: Update, context: CallbackContext):
                     parse_mode=ParseMode.HTML,
                 )
                 update.effective_message.reply_text(
-                    "Watashi ga kita !", reply_to_message_id=reply
+                    "Hello Everyone !", reply_to_message_id=reply
                 )
                 continue
 
