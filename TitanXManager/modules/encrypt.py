@@ -1,6 +1,6 @@
 import secureme
 
-from FallenRobot.events import register
+from TitanXManager.events import register
 
 
 @register(pattern="^/encrypt ?(.*)")
