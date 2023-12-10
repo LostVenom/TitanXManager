@@ -1,7 +1,7 @@
 from aiohttp import ClientSession
 from pyrogram import filters
 
-from FallenRobot import pbot
+from TitanXManager import pbot
 from TitanXManager.utils.errors import capture_err
 
 
