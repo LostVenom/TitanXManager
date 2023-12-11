@@ -19,7 +19,7 @@ INSERTION_LOCK = threading.RLock()
 
 def is_titan(chat_id):
     try:
-        chat = SESSION.query(TitanXSuport).get(str(chat_id))
+        chat = SESSION.query(TitanXSupport).get(str(chat_id))
         return bool(chat)
     finally:
         SESSION.close()
