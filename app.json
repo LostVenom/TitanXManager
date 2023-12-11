@@ -7,7 +7,7 @@
          "modular",
          "group",
          "manager",
-         "Fallen"
+         "Titan"
       ],   
    "repository": "https://github.com/PIRATE303/TitanXManager",
    "stack": "heroku-22",
@@ -69,7 +69,7 @@
          "value": ""
       },
       "SUPPORT_CHAT": {
-         "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Fallen Support than consider you made an enemy.",
+         "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Titan Support than consider you made an enemy.",
          "required": true,
          "value": ""
       },
