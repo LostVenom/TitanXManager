@@ -720,8 +720,7 @@ def main():
      ★ **ʟɪʙʀᴀʀʏ :** `{telever}`
      ★ **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
      ★ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
-╚╩═══••✠•❀•✠••════╩╝
-""",
+╚╩═══••✠•❀•✠••════╩╝""",
                 parse_mode=ParseMode.MARKDOWN,
             )
         except Unauthorized:
