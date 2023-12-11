@@ -107,8 +107,7 @@ Hey! Myself Titan Manager. I am a group management bot, I have lots of handy and
 ♧ /start : Starts me! I think You've probably already used this.
 ♧ /help  : Sends this message! I'll tell you more about myself!
 ♧ /donate: [TITAN](https://t.me/TitanNetwrk)
-  If you have any doubts or questions on how to use me, must visit TITAN (https://t.me/TitanXSupport) .
-All commands can be used with the following: / ! 
+  If you have any doubts or questions on how to use me, must visit TITAN (https://t.me/TitanXSupport) . All commands can be used with the following: / ! 
 
 IMPORTED = {}
 MIGRATEABLE = []
