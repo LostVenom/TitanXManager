@@ -38,8 +38,8 @@ def titanrm(update: Update, context: CallbackContext) -> str:
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
         is_titan = sql.set_titan(chat.id)
-        if is_fallen:
-            is_fallen = sql.set_titan(user_id)
+        if is_titan:
+            is_titan = sql.set_titan(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"AI_DISABLED\n"
