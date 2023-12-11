@@ -106,7 +106,7 @@ def titan(update: Update, context: CallbackContext):
 
 def titan_message(context: CallbackContext, message):
     reply_message = message.reply_to_message
-    if message.text.lower() == "fallen":
+    if message.text.lower() == "titan":
         return True
     elif BOT_USERNAME in message.text:
         return True
