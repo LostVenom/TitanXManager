@@ -713,7 +713,7 @@ def main():
                 chat_id=f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
-ㅤ {BOT_NAME}  ιѕ σиℓιиє.........👻
+ㅤ {BOT_NAME}  ιѕ σиℓιиє.........
 
 ╔╦═══••✠•❀•✠••════╦╗
     ★ **ᴘʏᴛʜᴏɴ :** `{y()}`
