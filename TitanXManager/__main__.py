@@ -75,7 +75,6 @@ PM_START_TEXT = """
 *ʜᴇʏ* {}, 🥀
 
 *๏ ᴍʏsᴇʟꜰ* {} !
-
 𖤍 ᴀɴ ᴀᴅᴠᴀɴᴄᴇ & ꜰᴀꜱᴛ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ ʟᴏᴛs ᴏғ ᴜsᴇғᴜʟ ᴀɴᴅ ᴄᴏᴏʟ ғᴇᴀᴛᴜʀᴇs.
 
 *๏ ᴛᴀᴘ ᴏɴ ᴄᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ ᴛᴏ ʟᴇᴀʀɴ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ғᴇᴀᴛᴜʀᴇs ᴏғ ᴛɪᴛᴀɴ.*
@@ -89,7 +88,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="🛠 ᴄᴏᴍᴍᴀɴᴅs 🛠", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(text="🕷 ᴀʙᴏᴜᴛ 🕷", callback_data="titan_"),
@@ -97,17 +96,20 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="👻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 👻", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="☁️ sᴏᴜʀᴄᴇ ☁️", callback_data="source_"),
+        InlineKeyboardButton(text="🏴‍☠ ɴᴇᴛᴡᴏʀᴋ 🏴‍☠", url=f"https://t.me/TitanNetwrk",),
     ],
 ]
 
 HELP_STRINGS = f"""
-*𖤍 {BOT_NAME} Help Menu*
-Hey! Myself Titan Manager. I am a group management bot, I have lots of handy and useful features.!
+*𖤍  Help Menu*
+
+Hey! Myself Titan Manager. I am a group management bot, I have lots of handy and useful features!
+
 ♧ /start : Starts me! I think You've probably already used this.
 ♧ /help  : Sends this message! I'll tell you more about myself!
-♧ /donate: [TITAN](https://t.me/TitanNetwrk)
-  If you have any doubts or questions on how to use me, must visit TITAN (https://t.me/TitanXSupport) . All commands can be used with the following: / ! 
+
+  If you have any Doubts or Queries on how to use me, must visit [TITAN](https://t.me/TitanXSupport) to get your Queries ressolved as soon as possible. All commands can be used with the following: / ! 
+"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -183,7 +185,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="🔙", callback_data="help_back")]]
                     ),
                 )
 
@@ -204,7 +206,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
-                "CAACAgUAAxkBAAEK8Exldb-qgKS08gXee6KLBeGWTtW-GgAC2AsAAksJ2VYLiwABIk-zkxIzBA"
+                "CAACAgUAAxkBAAJYsmLWRvm70cE-mmxSNCovEf4v1ueJAAIcCAACbMK4VuL4EmZEkq8WKQQ"
             )
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
@@ -215,7 +217,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -303,7 +305,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="🔙", callback_data="help_back")]]
                 ),
             )
 
@@ -347,50 +349,49 @@ def Titan_about_callback(update: Update, context: CallbackContext):
     if query.data == "titan_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"*ʜᴇʏ,*🥀\n  *ᴛʜɪs ɪs {BOT_NAME}*"
-            "\n*ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.*"
-            "\n*ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ sǫʟᴀʟᴄʜᴇᴍʏ ᴀɴᴅ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ.*"
-            "\n\n────────────────────"
-            f"\n*➻ ᴜᴩᴛɪᴍᴇ »* {uptime}"
-            f"\n*➻ ᴜsᴇʀs »* {sql.num_users()}"
-            f"\n*➻ ᴄʜᴀᴛs »* {sql.num_chats()}"
-            "\n────────────────────"
-            "\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
-            "\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ."
-            "\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ."
-            "\n➲  ɪ ᴄᴀɴ ᴡᴀʀɴ ᴜꜱᴇʀꜱ ᴜɴᴛɪʟ ᴛʜᴇʏ ʀᴇᴀᴄʜ ᴍᴀx ᴡᴀʀɴꜱ, ᴡɪᴛʜ ᴇᴀᴄʜ ᴘʀᴇᴅᴇꜰɪɴᴇᴅ ᴀᴄᴛɪᴏɴꜱ ꜱᴜᴄʜ ᴀꜱ ʙᴀɴ, ᴍᴜᴛᴇ, ᴋɪᴄᴋ, ᴇᴛᴄ."
-            "\n➲  ɪ ʜᴀᴠᴇ ᴀ ɴᴏᴛᴇ ᴋᴇᴇᴘɪɴɢ ꜱʏꜱᴛᴇᴍ, ʙʟᴀᴄᴋʟɪꜱᴛꜱ, ᴀɴᴅ ᴇᴠᴇɴ ᴘʀᴇᴅᴇᴛᴇʀᴍɪɴᴇᴅ ʀᴇᴘʟɪᴇꜱ ᴏɴ ᴄᴇʀᴛᴀɪɴ ᴋᴇʏᴡᴏʀᴅꜱ."
-            f"\n\n➻ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʙᴀsɪᴄ ʜᴇʟᴩ ᴀɴᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ {BOT_NAME}.",
+            text=f"*ʜᴇʏ!,*"
+            "\n *Myself Titan Robot*"
+            "\n*I am a group management bot, build to help you manage your Group easily and efficiently!*"
+            "\n*I have lots of handy features, which will help to manage your group easily and helps you in keeping your group safe from spammers and raiders.*"
+            "\n\n┏━━━━━━━━━━━━━━➣"
+            f"\n*┣⪼ ᴜᴘᴛɪᴍᴇ ~* {uptime}"
+            f"\n*┣⪼ ᴜsᴇʀs  ~* {sql.num_users()}"
+            f"\n*┣⪼ ᴄʜᴀᴛs  ~* {sql.num_chats()}"
+            "\n┗━━━━━━━━━━━━━━➣"
+            "\n\n• Thanks to all our supporters and everyone who reports issues or suggests new features."
+            
+            "\n• We also thank all the 𝗚𝗿𝗼𝘂𝗽𝘀 who rely on our Bot for Management services, we hope you will always like it: we are constantly working to improve it!"
+        
+            f"\n\n✦ ᴛᴀᴘ ᴏɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴀɴᴅ  ʟᴇᴀʀɴ ᴍᴏʀᴇ ʙᴀsɪᴄs ᴀʙᴏᴜᴛ {BOT_NAME}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", callback_data="TitanXSupport"
+                            text="🔎 sᴜᴘᴘᴏʀᴛ 🔍", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
+                            text="🛠 ᴄᴏᴍᴍᴀɴᴅs 🛠", callback_data="help_back"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                            text="👻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 👻", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="sᴏᴜʀᴄᴇ",
-                            callback_data="source_",
+                            text="🏴‍☠ ɴᴇᴛᴡᴏʀᴋ 🏴‍☠", url=f"https://t.me/TitanNetwrk",
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="titan_back"),
+                        InlineKeyboardButton(text="🔙", callback_data="titan_back"),
                     ],
                 ]
             ),
         )
     elif query.data == "TitanXSupport":
         query.message.edit_text(
-            text="*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴩ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍᴇ.*"
+            text="*๏ ᴛᴀᴘ ᴏɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏ ᴀʙᴏᴜᴛ ᴍᴇ.*"
             f"\n\nɪғ ʏᴏᴜ ғᴏᴜɴᴅ ᴀɴʏ ʙᴜɢ ɪɴ {BOT_NAME} ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ɢɪᴠᴇ ғᴇᴇᴅʙᴀᴄᴋ ᴀʙᴏᴜᴛ ᴛʜᴇ {BOT_NAME}, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -413,7 +414,7 @@ def Titan_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="titan_"),
+                        InlineKeyboardButton(text="🔙", callback_data="titan_"),
                     ],
                 ]
             ),
@@ -434,26 +435,15 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=f"""
-*ʜᴇʏ,
- ᴛʜɪs ɪs {BOT_NAME},
-ᴀɴ ᴏᴩᴇɴ sᴏᴜʀᴄᴇ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.*
+*Hey,
+ Myself {BOT_NAME},
+*
 
-ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ : [ᴛᴇʟᴇᴛʜᴏɴ](https://github.com/LonamiWebs/Telethon)
-
-[ᴩʏʀᴏɢʀᴀᴍ](https://github.com/pyrogram/pyrogram)
-
-[ᴩʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ](https://github.com/python-telegram-bot/python-telegram-bot)
-
-ᴀɴᴅ ᴜsɪɴɢ [sǫʟᴀʟᴄʜᴇᴍʏ](https://www.sqlalchemy.org) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
-
- | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
-
-
-""",  
+""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="source_back")]]
+                [[InlineKeyboardButton(text="🔙", callback_data="source_back")]]
             ),
         )
     elif query.data == "source_back":
@@ -492,20 +482,20 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "» ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
+            "» Contact me in PM to get help.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
+                            text="Open in Private ",
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
-                            ),
+                              ),
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
+                            text="Open Here",
                             callback_data="help_back",
                         )
                     ],
@@ -526,7 +516,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="🔙", callback_data="help_back")]]
             ),
         )
 
@@ -598,7 +588,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="◁",
+                                text="🔙",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -715,14 +705,14 @@ def main():
                 chat_id=f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
-ㅤ {BOT_NAME}  ιѕ σиℓιиє.........
+🎶 {BOT_NAME} ☆● ιѕ σиℓιиє ●☆.......❤️‍🔥👻💫
 
-╔╦═══••✠•❀•✠••════╦╗
-    ★ **ᴘʏᴛʜᴏɴ :** `{y()}`
-    ★ **ʟɪʙʀᴀʀʏ :** `{telever}`
-    ★ **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
-    ★ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
-╚╩═══••✠•❀•✠••════╩╝""",
+╔╦════••✠•❀•✠••═════╦╗
+ㅤ★ **ᴘʏᴛʜᴏɴ :** `{y()}`
+ㅤ★ **ʟɪʙʀᴀʀʏ :** `{telever}`
+ㅤ★ **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
+ㅤ★ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
+╚╩════••✠•❀•✠••═════╩╝""",
                 parse_mode=ParseMode.MARKDOWN,
             )
         except Unauthorized:
