@@ -85,20 +85,16 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
 
     # can only have a certain amount of buttons side by side
     if len(pairs) > 3:
-        pairs = pairs[modulo_page * 4 : 4 * (modulo_page + 1)] + [
-            (
-                EqInlineKeyboardButton(
-                    "◁", callback_data="{}_prev({})".format(prefix, modulo_page)
-                ),
-                EqInlineKeyboardButton("• ʜᴏᴍᴇ •", callback_data="titan_back"),
-                EqInlineKeyboardButton(
-                    "▷", callback_data="{}_next({})".format(prefix, modulo_page)
-                ),
-            )
-        ]
+     pairs = [
+    modules[i * 3:(i + 1) * 3] for i in range((len(modules) + 3 - 1) // 3)
+    ]
 
+    round_num = len(modules) / 3
+    calc = len(modules) - round(round_num)
+    if calc in [1, 2]:
+        pairs.append((modules[-1],))
     else:
-        pairs += [[EqInlineKeyboardButton("• ʙᴀᴄᴋ •", callback_data="titan_back")]]
+        pairs += [[EqInlineKeyboardButton("[🔙]",  callback_data="titan_back")]]
 
     return pairs
 
